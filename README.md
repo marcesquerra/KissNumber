@@ -18,44 +18,49 @@ What you need to know about KissNumber:
 
 ## Examples
 
-    import com.bryghts.kissnumber._
-    
-    object Examples extends App
-    {
-    
-        val n: Number = 3
-    
-        def foo(x: Number, y: Number, z: Number): Number = x + y / z
-    
-        val a: IntegerNumber = 1
-        val b: RealNumber    = 2.3
-        val c: Number        = 67
-    
-        val d = foo(a, b, c)
-    
-        println(d)
-    
-        val l: List[Number] = List(1, 4.5, 2, 3, -2)
-    
-        println(l.map{_ * 2}.mkString(","))
-    
-        // This last example does not compile on version 0.0.1 but does on last
-        // github version
-        println(l.sorted.mkString(","))
-    
-    }
+```scala
+import com.bryghts.kissnumber._
+
+object Examples extends App
+{
+
+    val n: Number = 3
+
+    def foo(x: Number, y: Number, z: Number): Number = x + y / z
+
+    val a: IntegerNumber = 1
+    val b: RealNumber    = 2.3
+    val c: Number        = 67
+
+    val d = foo(a, b, c)
+
+    println(d)
+
+    val l: List[Number] = List(1, 4.5, 2, 3, -2)
+
+    println(l.map{_ * 2}.mkString(","))
+
+    // This last example does not compile on version 0.0.1 but does on last
+    // github version
+    println(l.sorted.mkString(","))
+
+}
+```
 
 ## Get it
 
 Maven Dependency:
 
-    <dependency>
-      <groupId>com.bryghts.kissnumber</groupId>
-      <artifactId>kissnumber_2.10</artifactId>
-      <version>0.0.1</version>
-    </dependency>
+```xml
+<dependency>
+  <groupId>com.bryghts.kissnumber</groupId>
+  <artifactId>kissnumber_2.10</artifactId>
+  <version>0.0.1</version>
+</dependency>
+```
 
 Sbt Dependency:
 
-    libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.1"
-
+```scala
+libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.1"
+```
