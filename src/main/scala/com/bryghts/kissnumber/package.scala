@@ -29,15 +29,15 @@ package object kissnumber
 
 
 	implicit object NumberIsFractional      extends NumberIsFractionalDef      with NumberOrderingDef
-	implicit object NumberOrdering          extends NumberOrderingDef
+	         object NumberOrdering          extends NumberOrderingDef
 
 	         object NumberAsIfIntegral      extends NumberAsIfIntegralDef      with NumberOrderingDef
 
 	implicit object IntegerNumberIsIntegral extends IntegerNumberIsIntegralDef with IntegerNumberOrderingDef
-	implicit object IntegerNumberOrdering   extends IntegerNumberOrderingDef
+	         object IntegerNumberOrdering   extends IntegerNumberOrderingDef
 
 	implicit object RealNumberIsFractional  extends RealNumberIsFractionalDef  with RealNumberOrderingDef
-	implicit object RealNumberOrdering      extends RealNumberOrderingDef
+	         object RealNumberOrdering      extends RealNumberOrderingDef
 
 	         object RealNumberAsIfIntegral  extends RealNumberAsIfIntegralDef  with RealNumberOrderingDef
 
