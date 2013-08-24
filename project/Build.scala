@@ -6,7 +6,7 @@ object BuildSettings
 
 	val buildSettings = Defaults.defaultSettings ++ Seq(
 			organization := "com.bryghts.kissnumber",
-			version      := "0.0.2-SNAPSHOT",
+			version      := "0.0.2",
 			scalaVersion := "2.10.1",
 			scalacOptions ++= Seq(),
 			publishMavenStyle := true,

@@ -40,8 +40,6 @@ object Examples extends App
 
     println(l.map{_ * 2}.mkString(","))
 
-    // This last example does not compile on version 0.0.1 but does on last
-    // github version
     println(l.sorted.mkString(","))
 
 }
@@ -55,12 +53,12 @@ Maven Dependency:
 <dependency>
   <groupId>com.bryghts.kissnumber</groupId>
   <artifactId>kissnumber_2.10</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
 </dependency>
 ```
 
 Sbt Dependency:
 
 ```scala
-libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.1"
+libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.2"
 ```
