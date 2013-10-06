@@ -53,12 +53,12 @@ Maven Dependency:
 <dependency>
   <groupId>com.bryghts.kissnumber</groupId>
   <artifactId>kissnumber_2.10</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
 </dependency>
 ```
 
 Sbt Dependency:
 
 ```scala
-libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.2"
+libraryDependencies += "com.bryghts.kissnumber" % "kissnumber_2.10" % "0.0.3"
 ```
