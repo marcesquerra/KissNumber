@@ -143,6 +143,39 @@ sealed abstract class Number
 	def %(x: Float):           Number
 	def %(x: Double):          Number
 
+	override def equals(in: Any) = {
+		object OnAnyNum
+		{
+			def unapply(in: Any): Option[AnyVal] =
+			in match {
+			  case b: Byte   => Some(b)
+			  case c: Char   => Some(c)
+			  case s: Short  => Some(s)
+			  case i: Int    => Some(i)
+			  case j: Long   => Some(j)
+			  case f: Float  => Some(f)
+			  case d: Double => Some(d)
+			  case _         => None
+			}
+		}
+
+		this match {
+			case self: IntegerNumber =>
+				in match {
+					case i: IntegerNumber => i.v == self.v
+					case r: RealNumber    => r.v == self.v
+					case OnAnyNum(a)      => a   == self.v
+					case _                => false
+				}
+			case self: RealNumber =>
+				in match {
+					case i: IntegerNumber => i.v == self.v
+					case r: RealNumber    => r.v == self.v
+					case OnAnyNum(a)      => a   == self.v
+					case _                => false
+				}
+		}
+	}
 }
 
 object Number

@@ -6,9 +6,12 @@ object BuildSettings
 
 	val buildSettings = Defaults.defaultSettings ++ Seq(
 			organization := "com.bryghts.kissnumber",
-			version      := "0.0.2",
+			version      := "0.0.3",
 			scalaVersion := "2.10.1",
 			scalacOptions ++= Seq(),
+			libraryDependencies += "org.specs2" %% "specs2" % "2.2.2" % "test",
+			libraryDependencies += "junit" % "junit" % "4.11" % "test",
+			scalacOptions in Test ++= Seq("-Yrangepos"),
 			publishMavenStyle := true,
 			publishTo <<= version { (v: String) =>
 				val nexus = "https://oss.sonatype.org/"
@@ -39,6 +42,9 @@ object BuildSettings
 	)
 
 }
+
+
+
 
 object MyBuild extends Build
 {
